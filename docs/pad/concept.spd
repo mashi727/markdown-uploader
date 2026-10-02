@@ -1,5 +1,5 @@
 Markdown を Notion のページにする
-	:comment 問題：Markdown と Notion は形が違う
+	:comment 課題：Markdown と Notion は形が違う
 	:comment 方針：要素ごとにブロックへ変換する
 	認証を用意する
 		DB の ID とトークンを@~/.token/notion に置く

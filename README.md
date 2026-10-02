@@ -2,6 +2,14 @@
 
 MarkdownファイルをNotionにアップロードするPythonツールです。フロントマター、画像、数式、コードブロック、Obsidianスタイルのコールアウトなど、様々なMarkdown要素をサポートしています。
 
+## 考え方
+
+何が問題で、それをどう解いているかを PAD（問題分析図）で示します。各段の詳細は下の各節を参照してください。
+
+<img src="docs/pad/concept.png" alt="考え方の PAD。Markdown を Notion のページにするため、認証を用意し、題と要約を決め、本文を Notion のブロックに変換し、100 ブロックを超えればページを分けて作る" width="100%">
+
+<sub>図の元は [`docs/pad/concept.spd`](docs/pad/concept.spd)。[padkit](https://github.com/mashi727/padkit) で検査・描画しています。</sub>
+
 ## 🎯 特徴
 
 ### 基本機能

@@ -1,0 +1,22 @@
+Markdown を Notion のページにする
+	:comment 問題：Markdown と Notion は形が違う
+	:comment 方針：要素ごとにブロックへ変換する
+	認証を用意する
+		DB の ID とトークンを@~/.token/notion に置く
+	ファイルを渡す
+		$ python main.py note.md
+	題と要約を決める
+		:if remote-claude 形式か
+			実行記録から題と要約を作る
+		:else
+			フロントマターの@title・abstract を使う
+	本文をブロックに変換する
+		見出し・数式・コールアウト@などを Notion の型にする
+		:if ローカル画像があるか
+			FTP、だめなら ImgBB に@上げて URL で埋め込む
+	ページを作る
+		:if 100 ブロックを超えるか
+			続きのページに分けて作る
+		:else
+			1 ページで作る
+	:terminal Notion 上のページ
